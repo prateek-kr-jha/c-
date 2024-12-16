@@ -10,14 +10,21 @@ used where high performance and precise control over memory is required.
 - step 5: link object files
 - step 6: test program
 
-compiling: 
+#### compiling: 
 - checks code to make sure it follows the rules of the c++ code.
 - converts code to machine level language and outputs a *.o/obj file
 
-linking:
+#### linking:
 - linker's job is to combine all obj files and produce desired o/p file
 - read all .obj file's and make sure they are valid.
 - ensures all cross-file dependencies are resolved properly. if linker is unable to connect a reference to something with its definition, you'll get linker error.
 - linker also links library files.
 - o/p a executable file.
 
+### Structure
+
+- statements: causes program to perform some action.
+- functions: collection of statements that get executed sequentially
+- name of function, object, type, etc. is identifier.
+
+Object: An object is used to store a value in memory. A variable is an object that has a name (identifier). Naming our objects let us refer to those objects again later in the program. In general programming, the term object typically refers to an unnamed object in memory, a variable, or a function. In C++, the term object has a narrower definition that excludes functions.
