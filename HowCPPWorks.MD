@@ -38,3 +38,11 @@ An object is used to store a value in memory. A variable is an object that has a
     [[maybe_unused]] double phi { 1.61803 }; // Don't complain if phi is unused
 ```
 
+### I/O:
+- std::cout is buffered
+- std::endl: it outputs a newline (moving the cursor to the next line of the console), and it flushes the buffer (which is slow).
+- std::cin is buffered because it allows us to separate the entering of input from the extract of input. We can enter input once and then perform multiple extraction requests on it.
+
+### Operators
+- The number of operands that an operator takes as input is called the operator’s arity.
+- Both operator= and operator<< (when used to output values to the console) return their left operand. Thus, x = 5 returns x, and std::cout << 5 returns std::cout.
