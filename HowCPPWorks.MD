@@ -46,3 +46,24 @@ An object is used to store a value in memory. A variable is an object that has a
 ### Operators
 - The number of operands that an operator takes as input is called the operator’s arity.
 - Both operator= and operator<< (when used to output values to the console) return their left operand. Thus, x = 5 returns x, and std::cout << 5 returns std::cout.
+
+
+### functions
+- A function is a reusable sequence of statements designed to do a particular job.
+- The function initiating the function call is the caller, and the function being called (executed) is the callee. A function call is also sometimes called an invocation, with the caller invoking the callee.
+- It is a common misconception that main is always the first function that executes. Global variables are initialized prior to the execution of main. If the initializer for such a variable invokes a function, then that function will execute prior to main.
+- Variables defined inside the body of a function are called local variables
+-  Local variables are destroyed in the opposite order of creation at the end of the set of curly braces in which it is defined (or for a function parameter, at the end of the function).
+```
+int add(int x, int y)
+{
+    int z{ x + y };
+
+    return z;
+} // z, y, and x destroyed here
+```
+### preprocessor code:
+#include
+#define
+#if
+#endif
