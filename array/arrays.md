@@ -6,7 +6,10 @@
 ## **Basic Operations**
 1. Find the largest and smallest elements in an array.  - [X]
 2. Reverse an array.  [X]
-3. Rotate an array to the left by `k` positions.  
+3. Rotate an array to the left by `k` positions. 
+-[ ] reversal based
+-[ ] temporary array
+-[ ] cyclic replacement
 4. Rotate an array to the right by `k` positions.  
 5. Find the frequency of each element in an array.  
 6. Remove duplicates from an array.  
