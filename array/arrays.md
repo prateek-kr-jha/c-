@@ -4,7 +4,7 @@
 ---
 
 ## **Basic Operations**
-1. Find the largest and smallest elements in an array.  [X]
+1. Find the largest and smallest elements in an array.  - [X]
 2. Reverse an array.  [X]
 3. Rotate an array to the left by `k` positions.  
 4. Rotate an array to the right by `k` positions.  
