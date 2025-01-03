@@ -55,4 +55,5 @@ public class LargestAndSmallest {
         System.out.println(ans);
 
     }
+
 }
