@@ -43,6 +43,20 @@ public class RotateArrayLeft {
 
     }
 
+    public static int[] rotateUsingArray(int[] arr, int k) {
+        k = k % arr.length;
+        int[] tempArr = new int[arr.length];
+
+        for(int i = 0; i < arr.length; i++) {
+            int idx = i - k;
+            if(idx < 0) {
+                idx += arr.length;
+            }
+            tempArr[idx] = arr[i];
+        }
+        return tempArr;
+    }
+
     public static void main(String[] args) {
 
         int size = scn.nextInt();
@@ -51,8 +65,7 @@ public class RotateArrayLeft {
         int k = scn.nextInt();
         printArray(inputArray);
         System.out.println("K " + k);
-        rotateArrayByK(inputArray, k);
-        printArray(inputArray);
+        printArray(rotateUsingArray(inputArray, k));
 
     }
 
