@@ -48,12 +48,14 @@ public class RotateArrayLeft {
         int[] tempArr = new int[arr.length];
 
         for(int i = 0; i < arr.length; i++) {
-            int idx = i - k;
-            if(idx < 0) {
-                idx += arr.length;
-            }
+            // int idx = i - k;// or idx = (i -k + arr.length) % n;
+            // if(idx < 0) {
+            //     idx += arr.length;
+            // }
+            int idx = (i -k + arr.length) % arr.length;
             tempArr[idx] = arr[i];
         }
+
         return tempArr;
     }
 
