@@ -1,5 +1,5 @@
 import java.util.HashMap;
-import java.util.Scanner;;
+import java.util.Scanner;
 
 public class findFrequency {
     public static Scanner scn = new Scanner(System.in);
