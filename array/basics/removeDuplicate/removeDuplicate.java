@@ -56,6 +56,26 @@ public class removeDuplicate {
         }
     }
 
+    public static ArrayList<Integer> removeDuplicate(int[] arr) {
+        ArrayList<Integer> duplicatesRemoved = new ArrayList<>();
+        if(arr.length == 0) {
+            System.out.println("empty array");
+            return duplicatesRemoved;
+        }
+
+        mergeSort(arr);
+        for(int i = 0; i < arr.length; i++) {
+            if(i == 0) {
+                duplicatesRemoved.add(arr[i]);
+            } else {
+                if(arr[i] != arr[i - 1]) {
+                    duplicatesRemoved.add(arr[i]);
+                }
+            }
+        }
+
+        return duplicatesRemoved;
+    }
     public static void main(String[] args) {
 
         int size = scn.nextInt();
@@ -64,8 +84,14 @@ public class removeDuplicate {
         // System.out.println(mi);
         fillArray(inputArray);
         printArray(inputArray);
-        mergeSort(inputArray);
-        printArray(inputArray);
+        // mergeSort(inputArray);
+        // printArray(inputArray);
+
+        ArrayList<Integer> ans = removeDuplicate(inputArray);
+        for(Integer a: ans) {
+            System.out.print(a + " ");
+        }
+        System.out.println("duplicates removed");
 
     }
 }
