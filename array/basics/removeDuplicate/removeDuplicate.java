@@ -1,5 +1,8 @@
 import java.util.Scanner;
+import java.util.Set;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class removeDuplicate {
     public static Scanner scn = new Scanner(System.in);
@@ -56,7 +59,7 @@ public class removeDuplicate {
         }
     }
 
-    public static ArrayList<Integer> removeDuplicate(int[] arr) {
+    public static ArrayList<Integer> removeDuplicateEntries(int[] arr) {
         ArrayList<Integer> duplicatesRemoved = new ArrayList<>();
         if(arr.length == 0) {
             System.out.println("empty array");
@@ -76,18 +79,31 @@ public class removeDuplicate {
 
         return duplicatesRemoved;
     }
+
+    public static int[] removeDuplicatesUsingSets(int[] arr) {
+        Set<Integer> set1 = new HashSet<>();
+        for(int i:arr) {
+            set1.add(i);
+        }
+
+        int[] ans = new int[set1.size()];
+        int j =0;
+        for(int i:set1) {
+            ans[j] = i;
+            j++;
+        }
+
+        return ans;
+    }
     public static void main(String[] args) {
 
         int size = scn.nextInt();
         int[] inputArray = new int[size];
-
-        // System.out.println(mi);
         fillArray(inputArray);
         printArray(inputArray);
-        // mergeSort(inputArray);
-        // printArray(inputArray);
 
-        ArrayList<Integer> ans = removeDuplicate(inputArray);
+        // ArrayList<Integer> ans = removeDuplicateEntries(inputArray);
+        int[] ans = removeDuplicatesUsingSets(inputArray);
         for(Integer a: ans) {
             System.out.print(a + " ");
         }
